@@ -1,8 +1,16 @@
-name: Deploy companion to Pages
+name: Deploy to GitHub Pages
+
+# Replaces the legacy branch-based Pages build, which hung repeatedly on a
+# sibling repository: the build job sat with updated_at never advancing past
+# created_at, and only a cancel plus a manual
+# `POST /repos/:owner/:repo/pages/builds` cleared it. This path publishes the
+# site as an artifact instead, so a stuck run is visible and re-runnable from
+# the Actions tab.
 
 on:
   push:
     branches: [main]
+  # Lets a stuck or superseded deploy be re-run without an empty commit.
   workflow_dispatch:
 
 permissions:
@@ -10,28 +18,31 @@ permissions:
   pages: write
   id-token: write
 
+# Never cancel a deploy that is already publishing. A cancelled deploy-pages run
+# can leave the Pages environment mid-update, which is the failure mode this
+# workflow exists to avoid.
 concurrency:
   group: pages
   cancel-in-progress: false
 
 jobs:
   deploy:
+    name: Build and deploy
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/configure-pages@v5
+      - uses: actions/checkout@v7
+
+      - uses: actions/configure-pages@v6
+
+      # Deviates from the sibling repos only here. They serve the repository
+      # root; this one keeps its site in dist/, because .openai/hosting.json
+      # points the Codex static host at the same directory.
+      - uses: actions/upload-pages-artifact@v5
         with:
-          # Does NOT enable Pages on a fresh repo: the default GITHUB_TOKEN
-          # cannot create a Pages site ("Resource not accessible by
-          # integration"). Pages was enabled once in Settings > Pages with
-          # source "GitHub Actions"; this now just resolves the existing site.
-          enablement: true
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          # The Codex hosting config also points at dist/, so it stays put.
           path: dist
+
       - id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
