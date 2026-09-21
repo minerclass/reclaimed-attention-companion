@@ -5,6 +5,25 @@ credentials, or tokens.
 
 ---
 
+## 2026-09-21 - Clarifying the first case and restoring Table 1 questions
+
+**Why.** The evidence-versus-stipulation repair was conceptually correct, but the first
+case could still leave a reader wondering why all four status chips were emphasized in a
+weak case. The inquiry section also paraphrased five of the source table's six questions.
+
+**Changed.**
+
+- The first case now says directly that all four *warning conditions* are built into the
+  fictional scenario and that this does not make its learning claim strong.
+- The stipulation lead and legend use plainer language while retaining `Stipulated` as
+  the compact status word.
+- The inquiry cards now use the exact six question wordings from the manuscript's Table 1.
+
+**Scope.** The case structure, statuses, evidence guidance, interaction model, shared
+tokens, and visual design are unchanged.
+
+---
+
 ## 2026-09-21 - Separating an evidence claim from a scenario stipulation
 
 **Why.** A reader reported that the first section misrepresented its own argument, and
