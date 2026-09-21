@@ -20,6 +20,10 @@ Professional draft material accompanying a manuscript that has not yet been subm
 
 When supported, browser tools can select a section and read the current reflection, including notes. They cannot modify notes, publish, or transmit files. Sites hosting credentials must remain outside this repository.
 
+## Hosting
+
+Two deployments serve the same `dist/` directory. GitHub Pages builds from `.github/workflows/pages.yml` on every push to `main`, publishing at `https://minerclass.github.io/reclaimed-attention-companion/`. The Codex static host reads `.openai/hosting.json`, which is untracked and must be redeployed from that workspace separately. Keep `dist/` as the served directory so neither breaks.
+
 ## Design tokens
 
 The page links `https://minerclass.github.io/tokens.css` before its own stylesheet and declares `data-mjm-ground="light"` on the root element, following the adoption procedure documented in that file. Local tokens in `styles.css` point at the shared ones with fallbacks; colour literals elsewhere were replaced by those tokens. Text on the dark panels uses `--on-dark` with opacity for hierarchy, so it follows the ground rather than a fixed tint. Re-measure contrast against the real surfaces after changing either file.
