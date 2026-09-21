@@ -16,9 +16,13 @@ The framework is a proposal for inquiry, not a validated diagnostic, scoring sys
 
 ## Data and access
 
-Professional draft material. Preserve private access unless the author requests publication. The app has no analytics, external libraries, AI service, server form submission, or persistent browser storage. Notes exist only in the page until downloaded. Reloading discards them. Do not enter identifiable student or research participant information.
+Professional draft material. Preserve private access unless the author requests publication. The app has no analytics, AI service, server form submission, or persistent browser storage. It loads one external stylesheet, the shared ecosystem tokens at `https://minerclass.github.io/tokens.css`. Every token carries a fallback equal to the value the page used before adoption, so the page renders unchanged if that file is unavailable. Notes exist only in the page until downloaded. Reloading discards them. Do not enter identifiable student or research participant information.
 
 When supported, browser tools can select a section and read the current reflection, including notes. They cannot modify notes, publish, or transmit files. Sites hosting credentials must remain outside this repository.
+
+## Design tokens
+
+The page links `https://minerclass.github.io/tokens.css` before its own stylesheet and declares `data-mjm-ground="light"` on the root element, following the adoption procedure documented in that file. Local tokens in `styles.css` point at the shared ones with fallbacks; colour literals elsewhere were replaced by those tokens. Text on the dark panels uses `--on-dark` with opacity for hierarchy, so it follows the ground rather than a fixed tint. Re-measure contrast against the real surfaces after changing either file.
 
 ## Maintenance
 
