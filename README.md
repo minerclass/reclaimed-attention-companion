@@ -16,7 +16,7 @@ The framework is a proposal for inquiry, not a validated diagnostic, scoring sys
 
 ## Data and access
 
-Professional draft material. Preserve private access unless the author requests publication. The app has no analytics, AI service, server form submission, or persistent browser storage. It loads one external stylesheet, the shared ecosystem tokens at `https://minerclass.github.io/tokens.css`. Every token carries a fallback equal to the value the page used before adoption, so the page renders unchanged if that file is unavailable. Notes exist only in the page until downloaded. Reloading discards them. Do not enter identifiable student or research participant information.
+Professional draft material accompanying a manuscript that has not yet been submitted. The source is public; the hosted companion carries `noindex,nofollow`. The app has no analytics, AI service, server form submission, or persistent browser storage. It loads one external stylesheet, the shared ecosystem tokens at `https://minerclass.github.io/tokens.css`. Every token carries a fallback equal to the value the page used before adoption, so the page renders unchanged if that file is unavailable. Notes exist only in the page until downloaded. Reloading discards them. Do not enter identifiable student or research participant information.
 
 When supported, browser tools can select a section and read the current reflection, including notes. They cannot modify notes, publish, or transmit files. Sites hosting credentials must remain outside this repository.
 
