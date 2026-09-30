@@ -5,6 +5,62 @@ credentials, or tokens.
 
 ---
 
+## 2026-09-29 - Three new chapters, article summary, terms, and references
+
+**Why.** The companion covered the mechanism, the friction lenses, and Table 1, but not
+the parts of the article that readers most often need to check against a source: the
+phone-policy evidence (Section 3), the Illinois statute (Section 6), and the article's own
+account of what would count against the construct (Sections 5 and 9). The manuscript had
+also changed since the September 19 revision the first version was checked against.
+
+**Changed.**
+
+- Chapter 03 *Read the evidence*: six sources, each with what it examined, reported,
+  supports, and leaves open, plus a side-by-side table. Wording follows Section 3, including
+  the "suggestive evidence" qualification on the Allcott et al. first-year wellbeing result.
+- Chapter 04 *Read the statute*: ten provisions of 105 ILCS 5/10-20.88, each with what the
+  text provides, what meeting it would certify, and what it leaves open; the regulated and
+  exempted channels as an "administrative seam"; the three-year review as the moment a
+  learning question could be asked. Provisions were read against the current ILCS text and
+  paraphrased, not quoted at length.
+- Chapter 06 *Stress-test the idea*: six neighboring accounts, four groups of conditions
+  that would limit or change the claim, four research propositions, and the direct test.
+  Every question offered for telling accounts apart is labeled as the companion's own.
+- Chapter order is now: claim, mechanism, evidence, statute, task, stress-test, inquiry.
+- Added an "article in brief" panel with a map from chapters to article sections, eight key
+  terms, and the article's 33 references (generated from the manuscript by script).
+- Sources panel now states that the article uses four friction dimensions while this page
+  shows three on an infrastructural base.
+
+**Verified.** All 41 pickers work; no horizontal overflow at 375px in any chapter with
+every disclosure open; contrast measured on 1,511 text elements against real rendered
+surfaces (alpha and opacity composited) with zero failures. One earlier flag on the
+*Previous* button was a stalled opacity transition in a pane that could not draw, not a
+defect. Two overflow bugs found and fixed during the check: `1fr` grid tracks stretched by
+a table's minimum width, and a provision picker wider than a phone.
+
+**Scope.** Original four chapters, hypothetical cases, shared tokens, and export behavior
+are unchanged. `app.js` changed only in the section list, the assistive-tool description
+and handlers, and the removal of its old sources text (now built in `sections.js`).
+
+**Not done.** This work is on a local branch and has not been pushed. Whether and when to
+publish it is the author's decision.
+
+**AI-use record.**
+
+| Field | Entry |
+| --- | --- |
+| Tool | Anthropic Claude Sonnet 5.5, through Claude Code |
+| Date | 2026-09-29 |
+| Task | Review the manuscript; extend this companion |
+| Data type | The author's unpublished article manuscript; public statute text; public journal abstracts |
+| Instruction summary | Review the manuscript and create a digital companion |
+| Output summary | Three chapters, summary panel, terms, and references, plus a written review |
+| Researcher action | Pending the author's review |
+| Verification | Statute text read at ilga.gov; NCSL page checked; study claims compared with abstracts; references generated from the manuscript |
+
+---
+
 ## 2026-09-21 - Clarifying the first case and restoring Table 1 questions
 
 **Why.** The evidence-versus-stipulation repair was conceptually correct, but the first
