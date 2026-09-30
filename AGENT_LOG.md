@@ -5,6 +5,21 @@ credentials, or tokens.
 
 ---
 
+## 2026-09-29 - Published at the author's direction
+
+**Why.** The entry below records the new chapters as unpushed. The author has decided the
+companion should be public as a reference, so that note no longer holds.
+
+**Changed.** Commit `9dfcba9` was fast-forwarded onto `main` and pushed, and the Pages
+workflow deployed it. The live site at `https://minerclass.github.io/reclaimed-attention-companion/`
+was checked afterward: seven chapters, 33 references, shared tokens loading, no console errors.
+
+**Unchanged.** `noindex,nofollow` is still set, so the page is public by link but not
+offered to search engines. Removing it is a separate, one-line decision for the author.
+The Codex static host copy reads an untracked `.openai/hosting.json` and was not redeployed.
+
+---
+
 ## 2026-09-29 - Three new chapters, article summary, terms, and references
 
 **Why.** The companion covered the mechanism, the friction lenses, and Table 1, but not
